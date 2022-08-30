@@ -1,0 +1,13 @@
+:set number
+:set autoindent
+:set tabstop=4
+:set mouse=
+
+call plug#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'ap/vim-css-color'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'morhetz/gruvbox'
+call plug#end()
