@@ -6,7 +6,6 @@ set scrolloff=7
 
 
 set clipboard=unnamedplus
-set colorcolumn=79
 
 
 set tabstop=4
@@ -35,6 +34,8 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline-themes'
 set encoding=UTF-8
 
 call plug#end()
@@ -84,8 +85,14 @@ imap <S-Down> <Esc>v<Down>
 imap <S-Left> <Esc>v<Left>
 imap <S-Right> <Esc>v<Right>
 
-colorscheme tokyonight-night
 
+
+
+
+
+
+colorscheme tokyonight-night
+let g:airline_theme='murmur'
 
 " open new split panes to right and below
 set splitright
@@ -100,8 +107,6 @@ function! OpenTerminal()
   resize 10
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
-
-
 
 
 

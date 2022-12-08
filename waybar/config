@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "custom/dunst", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-right": ["pulseaudio", "custom/dunst", "network", "sway/language", "cpu", "memory", "battery", "tray", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -64,6 +64,9 @@
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"
+    },
+    "sway/language": {
+        "format": "{short} {variant}",
     },
     "pulseaudio": {
         //"scroll-step": 1,

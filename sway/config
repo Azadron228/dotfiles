@@ -24,7 +24,7 @@ set $menu dmenu_path | bemenu-run -b | xargs swaymsg exec --
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg "#1a1b26" solid_color
+output * bg /home/azardo/Pictures/fuji-san.jpg fill
 
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 #
@@ -260,7 +260,7 @@ bindsym $mod+p exec         'grim -c -                  | wl-copy ; notify-send 
     bindsym $mod+control+q exec  'nwg-bar'
 
 
-
+output * adaptive_sync on
 
 ###FONT###
 
