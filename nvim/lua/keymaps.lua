@@ -17,11 +17,14 @@ vim.g.mapleader = " "
 
 -- Normal --
 -- Better window navigation
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-
+-- keymap("n", "<C-h>", "<C-w>h", opts)
+-- keymap("n", "<C-j>", "<C-w>j", opts)
+-- keymap("n", "<C-k>", "<C-w>k", opts)
+-- keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "C-l", "TmuxNavigateLeft<CR>", opts)
+keymap("n", "C-r", "TmuxNavigateRight<CR>", opts)
+keymap("n", "C-h", "TmuxNavigateUp<CR>", opts)
+keymap("n", "C-j", "TmuxNavigateDown<CR>", opts)
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -82,15 +85,15 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 
-keymap('n', '<Up>', '<Nop>', opts)
-keymap('n', '<Down>', '<Nop>', opts)
-keymap('n', '<Left>', '<Nop>', opts)
-keymap('n', '<Right>', '<Nop>', opts)
-
-keymap('v', '<Up>', '<Nop>', opts)
-keymap('v', '<Down>', '<Nop>', opts)
-keymap('v', '<Left>', '<Nop>', opts)
-keymap('v', '<Right>', '<Nop>', opts)
+-- keymap('n', '<Up>', '<Nop>', opts)
+-- keymap('n', '<Down>', '<Nop>', opts)
+-- keymap('n', '<Left>', '<Nop>', opts)
+-- keymap('n', '<Right>', '<Nop>', opts)
+--
+-- keymap('v', '<Up>', '<Nop>', opts)
+-- keymap('v', '<Down>', '<Nop>', opts)
+-- keymap('v', '<Left>', '<Nop>', opts)
+-- keymap('v', '<Right>', '<Nop>', opts)
 
 -- Lsp
 keymap("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)

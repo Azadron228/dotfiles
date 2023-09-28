@@ -26,10 +26,12 @@ function M.config()
         extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
       },
       formatting.black.with { extra_args = { "--fast" } },
-      formatting.stylua,
-      formatting.pint,
+      -- formatting.stylua,
+      formatting.phpcsfixer,
       formatting.google_java_format,
       diagnostics.flake8,
+      diagnostics.cpplint,
+      -- diagnostics.phpcs,
     },
   }
 end

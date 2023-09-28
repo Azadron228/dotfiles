@@ -9,6 +9,8 @@ M.servers = {
   "jsonls",
   "yamlls",
   "intelephense",
+  -- "phpactor",
+  "clangd"
 }
 
 return M
