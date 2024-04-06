@@ -1,5 +1,8 @@
 #!/bin/sh
 
+swaybg -m fill -i /home/azardo/.wallpapers/wallhaven-9mjoy1.png &
+/home/azardo/.cargo/bin/i3bar-river &
+
 # This is the example configuration file for river.
 #
 # If you wish to edit this, you will probably want to copy it to
@@ -11,8 +14,8 @@
 # Note: the "Super" modifier is also known as Logo, GUI, Windows, Mod4, etc.
 
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
-riverctl map normal Super Return spawn alacritty 
-riverctl map normal Super D spawn "fuzzel -I" 
+riverctl map normal Super Return spawn foot
+riverctl map normal Super D spawn "fuzzel" 
 
 # Super+Q to close the focused view
 riverctl map normal Super+Shift Q close
@@ -20,6 +23,7 @@ riverctl map normal Super+Shift Q close
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift E exit
 
+riverctl input pointer-2-7-SynPS/2_Synaptics_TouchPad tap enabled
 # Super+J and Super+K to focus the next/previous view in the layout stack
 riverctl map normal Super J focus-view next
 riverctl map normal Super K focus-view previous
@@ -158,9 +162,6 @@ riverctl rule-add float -app-id 'float*' -title 'foo'
 riverctl rule-add csd -app-id "bar"
 
 #Set Wallpaper
-swaybg -m fill -i /home/azardo/.wallpapers/wavesofkanagawa.png &
-waybar &
-
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
 riverctl default-layout rivertile
